@@ -22,8 +22,8 @@ jobs:
       - name: Run OpenCode
         uses: dceoy/opencode-action@163f9a9cd3d3f497e2847635585419f951371d2f  # v0.8.1
         env:
-          OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           GITHUB_TOKEN: ${{ github.token }}
         with:
-          model: opencode-go/glm-5.3-flash-free
+          model: openrouter/openrouter/free
           use-github-token: true
