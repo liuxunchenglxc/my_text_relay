@@ -19,6 +19,10 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
         with:
           persist-credentials: false
+      - name: Setup Git
+        run: |
+          git config --global user.email "liuxunchenglxc@163.com"
+          git config --global user.name "OpenCode of Xuncheng Liu"
       - name: Run OpenCode
         uses: dceoy/opencode-action@163f9a9cd3d3f497e2847635585419f951371d2f  # v0.8.1
         env:
