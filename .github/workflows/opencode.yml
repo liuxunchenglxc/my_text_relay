@@ -31,3 +31,13 @@ jobs:
         with:
           model: openrouter/openrouter/free
           use-github-token: true
+      - name: Commit All
+        if: always()
+        run: |
+          git add --all
+          if ! git diff --cached --quiet; then
+            git commit -m "Commit All"
+            git push
+          else
+            echo "No changes to commit"
+          fi
