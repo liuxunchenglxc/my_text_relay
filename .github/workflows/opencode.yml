@@ -23,6 +23,7 @@ jobs:
         run: |
           git config --global user.email "liuxunchenglxc@163.com"
           git config --global user.name "OpenCode of Xuncheng Liu"
+          git config --global push.autoSetupRemote true
       - name: Run OpenCode
         uses: dceoy/opencode-action@163f9a9cd3d3f497e2847635585419f951371d2f  # v0.8.1
         env:
